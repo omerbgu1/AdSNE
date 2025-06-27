@@ -2,8 +2,6 @@ import torch
 from torch.nn import functional as F
 from torch_geometric.nn import GCNConv
 
-from v2.constants import DEVICE
-
 
 class GCN(torch.nn.Module):
     def __init__(self, in_channels, hidden_channels, embedded_dim, num_classes):

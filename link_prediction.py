@@ -5,7 +5,7 @@ from tqdm import tqdm
 import torch.nn.functional as F
 
 from sklearn.metrics import roc_auc_score
-from v2.constants import DEVICE
+from constants import DEVICE
 
 
 def generate_subgraph_features(split_data, train_data, k_hops_list, additional_tqdm_msg='', disable_tqdm=False):

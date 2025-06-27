@@ -7,19 +7,15 @@ from torch_geometric.transforms import RandomLinkSplit, RandomNodeSplit
 from torch_geometric.utils import k_hop_subgraph, subgraph
 from sklearn.metrics import roc_auc_score
 import numpy as np
-import matplotlib.pyplot as plt
-import random
 import networkx as nx
-import tempfile
-from pathlib import Path
 
-from v2.constants import SEED, DEVICE
+from constants import SEED, DEVICE
 
-from v2.link_prediction import train_link_predictor, generate_subgraph_features, test_link_predictor
-from v2.models import GCN, LinkPredictor
-from v2.node_classification import train_node_classifier, test_node_classifier
-from v2.os_utils import set_seed
-from v2.plots import plot_lp_loss, plot_lp_auc
+from link_prediction import train_link_predictor, generate_subgraph_features, test_link_predictor
+from models import GCN, LinkPredictor
+from node_classification import train_node_classifier, test_node_classifier
+from os_utils import set_seed
+from plots import plot_lp_loss, plot_lp_auc
 
 
 def load_dataset_custom(dataset_name):

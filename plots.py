@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from v2.constants import DEFAULT_PLT_COLORS
+from constants import DEFAULT_PLT_COLORS
 
 
 def plot_lp_loss(lp_epochs, lp_baseline_loss_arr, lp_subgraph_aware_loss_arr, dataset_name, k_hop):
